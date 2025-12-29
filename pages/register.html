@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body class="flex h-dvh">
+    <div
+      class="flex flex-col justify-between p-8 w-2/5 bg-[url('/src/image/login-background.png')] bg-cover"
+    >
+      <a class="w-fit h-fit" href="/pages/index.html">
+        <div class="flex items-center space-x-2">
+          <img
+            class="w-8 bg-white rounded-md"
+            src="/src/image/logo.png"
+            alt="logo"
+          />
+          <p class="text-white font-bold">Rayuan Manis</p>
+        </div>
+      </a>
+
+      <div class="text-white">
+        <p class="font-bold text-4xl">Segarnya Alam, Manisnya Rayuan.</p>
+        <br />
+        <p>
+          Nikmati buah-buahan segar pilihan terbaik yang diantar langsung ke
+          depan pintu rumah Anda.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-white/60 text-sm">
+          © 2024 Rayuan Manis. All rights reserved.
+        </p>
+      </div>
+    </div>
+    <div
+      class="w-3/5 bg-slate-100 flex flex-col justify-center items-center gap-4"
+    >
+      <div class="w-2/3">
+        <p class="text-2xl font-bold">Selamat Datang</p>
+        <p class="text-black/50">
+          Silakan masukkan detail akun Anda untuk mulai berbelanja.
+        </p>
+      </div>
+
+      <div class="flex flex-col w-2/3">
+        <label class="font-medium" for="email">Email</label>
+        <input
+          class="border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:ring-0 focus:border-slate-400"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="nama@email.com"
+        />
+      </div>
+
+      <div class="flex flex-col w-2/3">
+        <label class="font-medium" for="password">Password</label>
+        <input
+          class="border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:ring-0 focus:border-slate-400"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="************"
+        />
+      </div>
+
+      <div class="w-2/3">
+        <button
+          class="bg-pink-400 p-2 w-full rounded-md text-white font-semibold"
+        >
+          Masuk Sekarang
+        </button>
+      </div>
+
+      <div class="flex gap-1 justify-center w-2/3">
+        <p class="text-black/50 font-medium">Sudah punya akun?</p>
+        <a class="text-blue-500 font-medium" href="/pages/login.html">Login</a>
+      </div>
+    </div>
+  </body>
+</html>
