@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/css/output.css" />
-
-    <title>Rayuan Manis</title>
+    <link href="/src/css/output.css" rel="stylesheet" />
+    <title>About Us - Rayuan Manis</title>
   </head>
-  <body class="min-h-dvh">
+  <body class="font-sans text-gray-800">
     <!-- Navigation Bar -->
     <nav
       id="navbar"
@@ -51,230 +50,175 @@
     </nav>
     <!-- End Navigation Bar -->
 
-    <!-- Hero Section -->
+    <!-- Tentang Kami section -->
     <section
       id="hero"
-      class="relative min-h-dvh bg-[url('/src/image/hero-background.png')] bg-cover bg-center flex items-center"
+      class="relative h-screen bg-[url('/src/image/hero-background.png')] bg-cover bg-center"
     >
       <div
-        class="absolute inset-0 bg-linear-to-r from-black/70 via-black/40 to-transparent"
+        class="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-black/30"
       ></div>
 
-      <div class="relative w-3/5 mx-16 space-y-4">
-        <h1 class="text-4xl text-white font-bold">
-          Kini, Rayuan Manis Fruit Store hadir lebih dekat dengan anda!
-        </h1>
-        <p class="text-white">
-          Kami berkomitmen dalam menyediakan segala kebutuhan kamu. Mulai dari
-          Sayuran segar setiap hari, sampai buah-buahan yang memiliki kualitas
-          terjamin. Hingga sampai ke pelukanmu!
-        </p>
-        <button
-          class="bg-pink-400 py-2 px-8 rounded-full text-white font-semibold text-sm"
+      <div
+        class="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-6"
+      >
+        <h1 class="text-4xl font-bold mb-6">Tentang Kami</h1>
+        <p
+          class="max-w-4xl text-lg leading-relaxed font-light text-shadow-lg/40"
         >
-          Shop Now
-        </button>
+          Rayuan Manis Fruit Store didirikan pada tahun 2025 oleh para pendiri
+          yang namanya dirangkum dalam makna RAYUAN—singkatan dari Rayhan,
+          Ryuzan, Qya, dan Ulwan—dengan keyakinan bahwa buah bukan sekadar
+          kebutuhan, melainkan pengalaman rasa yang mampu menghadirkan cerita
+          dan kebahagiaan sederhana. Setiap buah dipilih dengan penuh perhatian
+          untuk menjaga kesegaran terbaik, rasa manis alami, dan kualitas yang
+          jujur, karena bagi kami “manis” bukan hanya tentang rasa, tetapi juga
+          kehangatan pelayanan dan ketulusan dalam setiap interaksi. Dari
+          konsumsi harian hingga hadiah penuh makna, Rayuan Manis hadir sebagai
+          rayuan sederhana yang menghidupkan momen dan selalu diingat.
+        </p>
       </div>
     </section>
-    <!-- End Hero Section -->
+    <!-- End Tentang Kami Section -->
 
-    <!-- Kelebihan Section -->
-    <section class="my-16">
-      <h2 class="text-center font-bold text-2xl mb-16">
-        Alasan memilih Toko Buah Rayuan Manis!
-      </h2>
+    <!-- Visi Misi Section -->
+    <section class="px-24 py-16 flex gap-20">
+      <!-- Visi -->
+      <div class="bg-pink-100 relative p-8 text-center w-1/2 rounded-2xl">
+        <img
+          class="w-32 absolute -top-16 left-1/2 -translate-x-1/2"
+          src="/src/image/stroberi-transparent.png"
+          alt="stroberi"
+        />
 
-      <!-- Baris Atas -->
-      <div class="flex justify-center gap-32 mb-20">
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan2.png" />
-          <p class="font-semibold text-xl">Teman Baik Keluarga</p>
-          <p class="text-black/50">
-            Memenuhi kebutuhan dan kelengkapan vitamin,baik untuk dirimu dan
-            keluarga.
-          </p>
-        </div>
+        <p class="text-4xl font-bold my-8">Visi</p>
 
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan3.png" />
-          <p class="font-semibold text-xl">Selalu Fresh</p>
-          <p class="text-black/50">
-            Pembaharuan stok setiap hari, untuk menjaga kualitas produk.
-          </p>
-        </div>
+        <p>
+          Menjadi toko buah terpercaya yang menghadirkan Rayuan Manis melalui
+          kesegaran, kualitas, dan cita rasa terbaik, serta menginspirasi
+          masyarakat untuk menjalani hidup yang lebih sehat secara alami sebagai
+          wujud komitmen RAYUAN (Raihan, Ryuzan, Qya, Ulwan) dalam menumbuhkan
+          kepercayaan dan kesejahteraan pelanggan.
+        </p>
       </div>
 
-      <!-- Baris Bawah -->
-      <div class="flex justify-center items-start gap-24">
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan1.png" />
-          <p class="font-semibold text-xl">100% Organik</p>
-          <p class="text-black/50">
-            Seluruh produk kami melalui proses penanaman yang organik, tanpa
-            pestisida dan rekayasa manis buatan.
-          </p>
-        </div>
+      <!-- Misi -->
+      <div class="bg-blue-100 relative p-8 w-1/2 rounded-2xl">
+        <img
+          class="w-32 absolute -top-16 left-1/2 -translate-x-1/2"
+          src="/src/image/bluberi-transparent.png"
+          alt="stroberi"
+        />
 
-        <!-- Gambar Tengah -->
-        <img class="w-80" src="/src/image/kelebihan5.png" alt="buah" />
+        <p class="text-4xl font-bold my-8 text-center">Misi</p>
 
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan4.png" />
-          <p class="font-semibold text-xl">Keamanan Terjaga</p>
-          <p class="text-black/50">
-            Dengan Kualitas kontrol yang ketat, mulai dari proses panen hingga
-            pengemasan.
-          </p>
+        <div class="space-y-2">
+          <div>
+            <p class="font-semibold">R – (Rayhan)</p>
+            <p>
+              Rasakan kesegaran dan manisnya buah-buahan berkualitas tinggi yang
+              memikat setiap pelanggan.
+            </p>
+          </div>
+
+          <div>
+            <p class="font-semibold">R – (Ryuzan)</p>
+            <p>
+              Rawat pelanggan dengan pelayanan ramah, responsif, dan profesional
+              untuk pengalaman belanja terbaik.
+            </p>
+          </div>
+
+          <div>
+            <p class="font-semibold">Q – (Qya)</p>
+            <p>
+              Querikan inovasi dalam produk, kemasan, dan konsep penjualan yang
+              menarik dan bernilai tambah.
+            </p>
+          </div>
+
+          <div>
+            <p class="font-semibold">U – (Ulwan)</p>
+            <p>
+              Utamakan kejujuran, keberlanjutan, dan dukungan terhadap petani
+              lokal sebagai wujud tanggung jawab sosial.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    <!-- End Kelebihan Section -->
+    <!-- End Visi Misi Section -->
 
-    <!-- Product Section -->
-    <section class="bg-[url('/src/image/product-background.png')] mt-24">
-      <h2 class="text-center font-bold text-2xl mb-8">Produk Kami</h2>
+    <!-- Feature Section -->
+    <section class="px-24 py-16 flex gap-10">
+      <div
+        class="flex flex-col justify-center items-center w-1/4 text-center gap-2"
+      >
+        <img class="w-24" src="/src/image/feature-1.png.png" alt="feature-1" />
 
-      <div class="flex">
-        <!-- Buah -->
-        <div class="w-1/2 relative">
-          <img
-            src="/src/image/buah-background.png"
-            class="w-full h-auto block"
-            alt="Buah"
-          />
+        <p class="font-semibold">Kesegaran Terjaga Setiap Hari</p>
 
-          <div class="absolute inset-0 bg-black/50"></div>
-
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center gap-2"
-          >
-            <img class="h-16" src="/src/image/buah-logo.png" alt="buah-logo" />
-            <p class="text-white/70 text-xl font-bold">Buah</p>
-          </div>
-        </div>
-
-        <!-- Hampers -->
-        <div class="w-1/2 relative">
-          <img
-            src="/src/image/hampers-background.png"
-            class="w-full h-auto block"
-            alt="Hampers"
-          />
-
-          <div class="absolute inset-0 bg-black/50"></div>
-
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center gap-2"
-          >
-            <img
-              class="h-16"
-              src="/src/image/hampers-logo.png"
-              alt="hampers-logo"
-            />
-            <p class="text-white/70 text-xl font-bold">Hampers</p>
-          </div>
-        </div>
+        <p>
+          Kami mengontrol kualitas kesegaran produk kami dengan sangat baik.
+        </p>
       </div>
 
       <div
-        class="flex items-center justify-center bg-indigo-300/50 py-16 gap-8"
+        class="flex flex-col justify-center items-center w-1/4 text-center gap-2"
       >
-        <img
-          class="h-80 drop-shadow-2xl"
-          src="/src/image/hampers-main.png"
-          alt="hampers-main"
-        />
+        <img class="w-24" src="/src/image/feature-2.png.png" alt="feature-2" />
 
-        <div class="space-y-6">
-          <div>
-            <p class="font-playfair-display italic font-bold text-xl">
-              Buah Segar Setiap Hari
-            </p>
-            <p class="text-4xl font-bold">Buat hampers versi kamu, yuk!</p>
-          </div>
-          <button
-            class="bg-pink-400 py-2 px-8 rounded-full text-white font-semibold text-sm"
-          >
-            Buat Sekarang
-          </button>
-        </div>
+        <p class="font-semibold">100% Produk Organik</p>
+
+        <p>Produk kami tidak menggunakan bahan- bahan kimia.</p>
       </div>
-    </section>
-    <!-- End Product Section -->
 
-    <!-- Testimonial Section -->
-    <section class="py-16 space-y-8">
-      <div class="text-center">
-        <p
-          class="font-playfair-display italic font-bold text-indigo-400 text-xl"
-        >
-          Testimoni
+      <div
+        class="flex flex-col justify-center items-center w-1/4 text-center gap-2"
+      >
+        <img class="w-24" src="/src/image/feature-3.png.png" alt="feature-3" />
+
+        <p class="font-semibold">Kualitas Terbaik</p>
+
+        <p>
+          Kami selalu berusaha memberikan produk siap jual dalam keadaan yang
+          terjaga.
         </p>
-        <h2 class="font-bold text-3xl mt-2">Kata Pelanggan Setia Kami</h2>
       </div>
 
-      <!-- Carousel Container -->
-      <div id="carousel-container" class="relative max-w-7xl mx-auto px-4">
-        <!-- Previous Button -->
-        <button
-          id="prevBtn"
-          class="absolute left-10 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-indigo-100 rounded-full p-3 shadow-lg transition-colors duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6 text-indigo-600"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 19.5L8.25 12l7.5-7.5"
-            />
-          </svg>
-        </button>
+      <div
+        class="flex flex-col justify-center items-center w-1/4 text-center gap-2"
+      >
+        <img class="w-24" src="/src/image/feature-4.png.png" alt="feature-4" />
 
-        <!-- Carousel Wrapper -->
-        <div
-          id="carousel"
-          class="flex items-center justify-center gap-6 transition-transform duration-500"
-        >
-          <!-- Testimonials -->
-        </div>
+        <p class="font-semibold">100% Alami</p>
 
-        <!-- Next Button -->
-        <button
-          id="nextBtn"
-          class="absolute right-10 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-indigo-100 rounded-full p-3 shadow-lg transition-colors duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6 text-indigo-600"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Dots Indicator -->
-      <div id="dots" class="flex justify-center gap-2 mt-8">
-        <!-- Dots will be rendered here by JavaScript -->
+        <p>Kesegaran hasil panen yang langsung diproses sesuai standar.</p>
       </div>
     </section>
-    <!-- End Testimonial Section -->
+    <!-- End Feature Section -->
+
+    <img
+      class="w-full"
+      src="/src/image/about-us-image.png"
+      alt="about-us-image"
+    />
+
+    <!-- Mengenal Kami Section -->
+    <section class="px-24 py-16 space-y-16">
+      <h2 class="text-center text-2xl font-bold">Mengenal Kami Lebih Jauh</h2>
+
+      <div class="flex">
+        <img class="w-1/4" src="/src/image/Rayhan.png" alt="foto-rayhan" />
+        <img class="w-1/4" src="/src/image/Ryuzan.png" alt="foto-ryuzan" />
+        <img class="w-1/4" src="/src/image/Qya.png" alt="foto-qya" />
+        <img class="w-1/4" src="/src/image/Ulwan.png" alt="foto-ulwan" />
+      </div>
+    </section>
+    <!-- End Mengenal Kami Section -->
 
     <!-- Footer Section -->
-    <footer class="px-24 py-8 bg-black/90 text-white">
+    <footer class="px-24 py-16 bg-black/90 text-white">
       <div class="flex gap-4">
         <!-- Contact -->
         <div class="space-y-4 w-1/5">

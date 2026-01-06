@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/output.css" />
 
-    <title>Rayuan Manis</title>
+    <title>Buah Segar</title>
   </head>
   <body class="min-h-dvh">
+    <div id="hero"></div>
+
     <!-- Navigation Bar -->
     <nav
       id="navbar"
@@ -52,229 +54,248 @@
     <!-- End Navigation Bar -->
 
     <!-- Hero Section -->
-    <section
-      id="hero"
-      class="relative min-h-dvh bg-[url('/src/image/hero-background.png')] bg-cover bg-center flex items-center"
-    >
-      <div
-        class="absolute inset-0 bg-linear-to-r from-black/70 via-black/40 to-transparent"
-      ></div>
+    <section class="pt-24">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="relative h-48 rounded-2xl overflow-hidden">
+          <img
+            src="/src/image/product-hero.png"
+            class="w-full h-full object-cover"
+            alt="Produk Kami"
+          />
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center"
+          >
+            <h1 class="text-white text-3xl font-bold text-shadow-lg/30">
+              Berbagai Produk Kami
+            </h1>
 
-      <div class="relative w-3/5 mx-16 space-y-4">
-        <h1 class="text-4xl text-white font-bold">
-          Kini, Rayuan Manis Fruit Store hadir lebih dekat dengan anda!
-        </h1>
-        <p class="text-white">
-          Kami berkomitmen dalam menyediakan segala kebutuhan kamu. Mulai dari
-          Sayuran segar setiap hari, sampai buah-buahan yang memiliki kualitas
-          terjamin. Hingga sampai ke pelukanmu!
-        </p>
-        <button
-          class="bg-pink-400 py-2 px-8 rounded-full text-white font-semibold text-sm"
-        >
-          Shop Now
-        </button>
+            <p class="text-white text-shadow-lg/30">
+              Pilihan buah dan sayuran yang terjaga kualitas serta kesegarannya,
+              untuk kamu dan keluarga.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <!-- End Hero Section -->
 
-    <!-- Kelebihan Section -->
-    <section class="my-16">
-      <h2 class="text-center font-bold text-2xl mb-16">
-        Alasan memilih Toko Buah Rayuan Manis!
-      </h2>
-
-      <!-- Baris Atas -->
-      <div class="flex justify-center gap-32 mb-20">
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan2.png" />
-          <p class="font-semibold text-xl">Teman Baik Keluarga</p>
-          <p class="text-black/50">
-            Memenuhi kebutuhan dan kelengkapan vitamin,baik untuk dirimu dan
-            keluarga.
-          </p>
-        </div>
-
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan3.png" />
-          <p class="font-semibold text-xl">Selalu Fresh</p>
-          <p class="text-black/50">
-            Pembaharuan stok setiap hari, untuk menjaga kualitas produk.
-          </p>
-        </div>
-      </div>
-
-      <!-- Baris Bawah -->
-      <div class="flex justify-center items-start gap-24">
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan1.png" />
-          <p class="font-semibold text-xl">100% Organik</p>
-          <p class="text-black/50">
-            Seluruh produk kami melalui proses penanaman yang organik, tanpa
-            pestisida dan rekayasa manis buatan.
-          </p>
-        </div>
-
-        <!-- Gambar Tengah -->
-        <img class="w-80" src="/src/image/kelebihan5.png" alt="buah" />
-
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan4.png" />
-          <p class="font-semibold text-xl">Keamanan Terjaga</p>
-          <p class="text-black/50">
-            Dengan Kualitas kontrol yang ketat, mulai dari proses panen hingga
-            pengemasan.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- End Kelebihan Section -->
-
     <!-- Product Section -->
-    <section class="bg-[url('/src/image/product-background.png')] mt-24">
-      <h2 class="text-center font-bold text-2xl mb-8">Produk Kami</h2>
-
-      <div class="flex">
-        <!-- Buah -->
-        <div class="w-1/2 relative">
+    <section
+      class="px-24 py-16 bg-[url('/src/image/product-background.png')] grid grid-cols-4 gap-10"
+    >
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
           <img
-            src="/src/image/buah-background.png"
-            class="w-full h-auto block"
-            alt="Buah"
+            class="w-full aspect-square object-cover"
+            src="/src/image/jeruk.png"
+            alt="Jeruk Sunkist"
           />
-
-          <div class="absolute inset-0 bg-black/50"></div>
-
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center gap-2"
-          >
-            <img class="h-16" src="/src/image/buah-logo.png" alt="buah-logo" />
-            <p class="text-white/70 text-xl font-bold">Buah</p>
-          </div>
         </div>
+        <p class="mt-3 text-center font-semibold">Jeruk Sunkist</p>
+      </div>
+      <!-- End Card -->
 
-        <!-- Hampers -->
-        <div class="w-1/2 relative">
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
           <img
-            src="/src/image/hampers-background.png"
-            class="w-full h-auto block"
-            alt="Hampers"
+            class="w-full aspect-square object-cover"
+            src="/src/image/apel.png"
+            alt="Apel"
           />
-
-          <div class="absolute inset-0 bg-black/50"></div>
-
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center gap-2"
-          >
-            <img
-              class="h-16"
-              src="/src/image/hampers-logo.png"
-              alt="hampers-logo"
-            />
-            <p class="text-white/70 text-xl font-bold">Hampers</p>
-          </div>
         </div>
+        <p class="mt-3 text-center font-semibold">Apel</p>
       </div>
+      <!-- End Card -->
 
-      <div
-        class="flex items-center justify-center bg-indigo-300/50 py-16 gap-8"
-      >
-        <img
-          class="h-80 drop-shadow-2xl"
-          src="/src/image/hampers-main.png"
-          alt="hampers-main"
-        />
-
-        <div class="space-y-6">
-          <div>
-            <p class="font-playfair-display italic font-bold text-xl">
-              Buah Segar Setiap Hari
-            </p>
-            <p class="text-4xl font-bold">Buat hampers versi kamu, yuk!</p>
-          </div>
-          <button
-            class="bg-pink-400 py-2 px-8 rounded-full text-white font-semibold text-sm"
-          >
-            Buat Sekarang
-          </button>
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/pir.png"
+            alt="Pier"
+          />
         </div>
+        <p class="mt-3 text-center font-semibold">Pier</p>
       </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/kelapa.png"
+            alt="Kelapa"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Kelapa</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/anggur.png"
+            alt="Anggur"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Anggur</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/kurma.png"
+            alt="Kurma"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Kurma</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/nanas.png"
+            alt="Nanas"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Nanas</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/jambu.png"
+            alt="Jambu"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Jambu</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/semangka.png"
+            alt="Semangka"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Semangka</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/pepaya.png"
+            alt="Pepaya"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Pepaya</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/buah-naga.png"
+            alt="Buah Naga"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Buah Naga</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/melon.png"
+            alt="Melon"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Melon</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/kiwi.png"
+            alt="Kiwi"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Kiwi</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/stroberi.png"
+            alt="Strawberry"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Strawberry</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/mangga.png"
+            alt="Mangga"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Mangga</p>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="rounded-2xl bg-blue-50 p-3">
+        <div class="rounded-xl overflow-hidden bg-white">
+          <img
+            class="w-full aspect-square object-cover"
+            src="/src/image/rambutan.png"
+            alt="Rambutan"
+          />
+        </div>
+        <p class="mt-3 text-center font-semibold">Rambutan</p>
+      </div>
+      <!-- End Card -->
     </section>
     <!-- End Product Section -->
 
-    <!-- Testimonial Section -->
-    <section class="py-16 space-y-8">
-      <div class="text-center">
-        <p
-          class="font-playfair-display italic font-bold text-indigo-400 text-xl"
-        >
-          Testimoni
-        </p>
-        <h2 class="font-bold text-3xl mt-2">Kata Pelanggan Setia Kami</h2>
-      </div>
-
-      <!-- Carousel Container -->
-      <div id="carousel-container" class="relative max-w-7xl mx-auto px-4">
-        <!-- Previous Button -->
-        <button
-          id="prevBtn"
-          class="absolute left-10 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-indigo-100 rounded-full p-3 shadow-lg transition-colors duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6 text-indigo-600"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 19.5L8.25 12l7.5-7.5"
-            />
-          </svg>
-        </button>
-
-        <!-- Carousel Wrapper -->
-        <div
-          id="carousel"
-          class="flex items-center justify-center gap-6 transition-transform duration-500"
-        >
-          <!-- Testimonials -->
-        </div>
-
-        <!-- Next Button -->
-        <button
-          id="nextBtn"
-          class="absolute right-10 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-indigo-100 rounded-full p-3 shadow-lg transition-colors duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6 text-indigo-600"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Dots Indicator -->
-      <div id="dots" class="flex justify-center gap-2 mt-8">
-        <!-- Dots will be rendered here by JavaScript -->
-      </div>
-    </section>
-    <!-- End Testimonial Section -->
-
     <!-- Footer Section -->
-    <footer class="px-24 py-8 bg-black/90 text-white">
+    <footer class="px-24 py-16 bg-black/90 text-white">
       <div class="flex gap-4">
         <!-- Contact -->
         <div class="space-y-4 w-1/5">

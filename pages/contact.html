@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-    <title>Rayuan Manis</title>
+    <title>Buah Segar</title>
   </head>
   <body class="min-h-dvh">
     <!-- Navigation Bar -->
@@ -52,229 +56,68 @@
     <!-- End Navigation Bar -->
 
     <!-- Hero Section -->
-    <section
-      id="hero"
-      class="relative min-h-dvh bg-[url('/src/image/hero-background.png')] bg-cover bg-center flex items-center"
-    >
-      <div
-        class="absolute inset-0 bg-linear-to-r from-black/70 via-black/40 to-transparent"
-      ></div>
+    <section id="hero" class="relative w-full">
+      <img
+        src="/src/image/contact-hero.png"
+        alt="Toko buah segar"
+        class="w-full h-105 object-cover"
+      />
 
-      <div class="relative w-3/5 mx-16 space-y-4">
-        <h1 class="text-4xl text-white font-bold">
-          Kini, Rayuan Manis Fruit Store hadir lebih dekat dengan anda!
-        </h1>
-        <p class="text-white">
-          Kami berkomitmen dalam menyediakan segala kebutuhan kamu. Mulai dari
-          Sayuran segar setiap hari, sampai buah-buahan yang memiliki kualitas
-          terjamin. Hingga sampai ke pelukanmu!
-        </p>
-        <button
-          class="bg-pink-400 py-2 px-8 rounded-full text-white font-semibold text-sm"
-        >
-          Shop Now
-        </button>
-      </div>
+      <div class="absolute inset-0 bg-black/40"></div>
     </section>
     <!-- End Hero Section -->
 
-    <!-- Kelebihan Section -->
-    <section class="my-16">
-      <h2 class="text-center font-bold text-2xl mb-16">
-        Alasan memilih Toko Buah Rayuan Manis!
-      </h2>
+    <!-- Info Section -->
+    <section class="px-24 py-16 flex justify-between">
+      <div class="space-y-4 w-2/5">
+        <h2 class="text-2xl font-bold">Lokasi Toko Kami</h2>
 
-      <!-- Baris Atas -->
-      <div class="flex justify-center gap-32 mb-20">
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan2.png" />
-          <p class="font-semibold text-xl">Teman Baik Keluarga</p>
-          <p class="text-black/50">
-            Memenuhi kebutuhan dan kelengkapan vitamin,baik untuk dirimu dan
-            keluarga.
-          </p>
-        </div>
-
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan3.png" />
-          <p class="font-semibold text-xl">Selalu Fresh</p>
-          <p class="text-black/50">
-            Pembaharuan stok setiap hari, untuk menjaga kualitas produk.
-          </p>
-        </div>
-      </div>
-
-      <!-- Baris Bawah -->
-      <div class="flex justify-center items-start gap-24">
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan1.png" />
-          <p class="font-semibold text-xl">100% Organik</p>
-          <p class="text-black/50">
-            Seluruh produk kami melalui proses penanaman yang organik, tanpa
-            pestisida dan rekayasa manis buatan.
-          </p>
-        </div>
-
-        <!-- Gambar Tengah -->
-        <img class="w-80" src="/src/image/kelebihan5.png" alt="buah" />
-
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan4.png" />
-          <p class="font-semibold text-xl">Keamanan Terjaga</p>
-          <p class="text-black/50">
-            Dengan Kualitas kontrol yang ketat, mulai dari proses panen hingga
-            pengemasan.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- End Kelebihan Section -->
-
-    <!-- Product Section -->
-    <section class="bg-[url('/src/image/product-background.png')] mt-24">
-      <h2 class="text-center font-bold text-2xl mb-8">Produk Kami</h2>
-
-      <div class="flex">
-        <!-- Buah -->
-        <div class="w-1/2 relative">
-          <img
-            src="/src/image/buah-background.png"
-            class="w-full h-auto block"
-            alt="Buah"
-          />
-
-          <div class="absolute inset-0 bg-black/50"></div>
-
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center gap-2"
-          >
-            <img class="h-16" src="/src/image/buah-logo.png" alt="buah-logo" />
-            <p class="text-white/70 text-xl font-bold">Buah</p>
-          </div>
-        </div>
-
-        <!-- Hampers -->
-        <div class="w-1/2 relative">
-          <img
-            src="/src/image/hampers-background.png"
-            class="w-full h-auto block"
-            alt="Hampers"
-          />
-
-          <div class="absolute inset-0 bg-black/50"></div>
-
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center gap-2"
-          >
-            <img
-              class="h-16"
-              src="/src/image/hampers-logo.png"
-              alt="hampers-logo"
-            />
-            <p class="text-white/70 text-xl font-bold">Hampers</p>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="flex items-center justify-center bg-indigo-300/50 py-16 gap-8"
-      >
-        <img
-          class="h-80 drop-shadow-2xl"
-          src="/src/image/hampers-main.png"
-          alt="hampers-main"
-        />
-
-        <div class="space-y-6">
-          <div>
-            <p class="font-playfair-display italic font-bold text-xl">
-              Buah Segar Setiap Hari
-            </p>
-            <p class="text-4xl font-bold">Buat hampers versi kamu, yuk!</p>
-          </div>
-          <button
-            class="bg-pink-400 py-2 px-8 rounded-full text-white font-semibold text-sm"
-          >
-            Buat Sekarang
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- End Product Section -->
-
-    <!-- Testimonial Section -->
-    <section class="py-16 space-y-8">
-      <div class="text-center">
-        <p
-          class="font-playfair-display italic font-bold text-indigo-400 text-xl"
-        >
-          Testimoni
+        <p>
+          Jalan Lenteng Agung Raya No.20 RT.5/RW.1 Lenteng Agung, Srengseng
+          Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota
+          Jakarta 12640
         </p>
-        <h2 class="font-bold text-3xl mt-2">Kata Pelanggan Setia Kami</h2>
       </div>
 
-      <!-- Carousel Container -->
-      <div id="carousel-container" class="relative max-w-7xl mx-auto px-4">
-        <!-- Previous Button -->
+      <div class="border"></div>
+
+      <div class="space-y-4 w-2/5 flex flex-col items-end">
+        <h2 class="text-2xl font-bold">Untuk Pesanan & Kebutuhan Lainnya</h2>
+
         <button
-          id="prevBtn"
-          class="absolute left-10 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-indigo-100 rounded-full p-3 shadow-lg transition-colors duration-300"
+          class="bg-green-500 py-3 px-8 rounded-full text-white font-semibold text-sm flex items-center gap-1"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
             viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6 text-indigo-600"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6 text-white"
           >
+            <title>WhatsApp</title>
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 19.5L8.25 12l7.5-7.5"
+              fill="currentColor"
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
             />
           </svg>
+
+          Whatsapp
         </button>
-
-        <!-- Carousel Wrapper -->
-        <div
-          id="carousel"
-          class="flex items-center justify-center gap-6 transition-transform duration-500"
-        >
-          <!-- Testimonials -->
-        </div>
-
-        <!-- Next Button -->
-        <button
-          id="nextBtn"
-          class="absolute right-10 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-indigo-100 rounded-full p-3 shadow-lg transition-colors duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6 text-indigo-600"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Dots Indicator -->
-      <div id="dots" class="flex justify-center gap-2 mt-8">
-        <!-- Dots will be rendered here by JavaScript -->
       </div>
     </section>
-    <!-- End Testimonial Section -->
+    <!-- End Info Section -->
+
+    <!-- Google Maps -->
+    <section class="w-full">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3175823656943!2d106.8325033!3d-6.3529165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec6b07b68ea5%3A0x17da46bdf9308386!2sSTT%20Terpadu%20Nurul%20Fikri%20-%20Kampus%20B!5e0!3m2!1sid!2sid!4v1767626076489!5m2!1sid!2sid"
+        class="w-full h-112.5 border-0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+    <!-- End Google Maps -->
 
     <!-- Footer Section -->
-    <footer class="px-24 py-8 bg-black/90 text-white">
+    <footer class="px-24 py-16 bg-black/90 text-white">
       <div class="flex gap-4">
         <!-- Contact -->
         <div class="space-y-4 w-1/5">

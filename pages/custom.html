@@ -52,226 +52,117 @@
     <!-- End Navigation Bar -->
 
     <!-- Hero Section -->
-    <section
-      id="hero"
-      class="relative min-h-dvh bg-[url('/src/image/hero-background.png')] bg-cover bg-center flex items-center"
-    >
-      <div
-        class="absolute inset-0 bg-linear-to-r from-black/70 via-black/40 to-transparent"
-      ></div>
+    <section id="hero" class="relative w-full">
+      <img
+        src="/src/image/custom-hampers-hero.png"
+        alt="Toko buah segar"
+        class="w-full h-105 object-cover"
+      />
 
-      <div class="relative w-3/5 mx-16 space-y-4">
-        <h1 class="text-4xl text-white font-bold">
-          Kini, Rayuan Manis Fruit Store hadir lebih dekat dengan anda!
-        </h1>
-        <p class="text-white">
-          Kami berkomitmen dalam menyediakan segala kebutuhan kamu. Mulai dari
-          Sayuran segar setiap hari, sampai buah-buahan yang memiliki kualitas
-          terjamin. Hingga sampai ke pelukanmu!
-        </p>
-        <button
-          class="bg-pink-400 py-2 px-8 rounded-full text-white font-semibold text-sm"
-        >
-          Shop Now
-        </button>
-      </div>
+      <div class="absolute inset-0 bg-black/40"></div>
     </section>
     <!-- End Hero Section -->
 
-    <!-- Kelebihan Section -->
-    <section class="my-16">
-      <h2 class="text-center font-bold text-2xl mb-16">
-        Alasan memilih Toko Buah Rayuan Manis!
-      </h2>
-
-      <!-- Baris Atas -->
-      <div class="flex justify-center gap-32 mb-20">
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan2.png" />
-          <p class="font-semibold text-xl">Teman Baik Keluarga</p>
-          <p class="text-black/50">
-            Memenuhi kebutuhan dan kelengkapan vitamin,baik untuk dirimu dan
-            keluarga.
-          </p>
-        </div>
-
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan3.png" />
-          <p class="font-semibold text-xl">Selalu Fresh</p>
-          <p class="text-black/50">
-            Pembaharuan stok setiap hari, untuk menjaga kualitas produk.
-          </p>
-        </div>
-      </div>
-
-      <!-- Baris Bawah -->
-      <div class="flex justify-center items-start gap-24">
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan1.png" />
-          <p class="font-semibold text-xl">100% Organik</p>
-          <p class="text-black/50">
-            Seluruh produk kami melalui proses penanaman yang organik, tanpa
-            pestisida dan rekayasa manis buatan.
-          </p>
-        </div>
-
-        <!-- Gambar Tengah -->
-        <img class="w-80" src="/src/image/kelebihan5.png" alt="buah" />
-
-        <div class="flex flex-col items-center text-center gap-4 w-64">
-          <img class="w-24" src="/src/image/kelebihan4.png" />
-          <p class="font-semibold text-xl">Keamanan Terjaga</p>
-          <p class="text-black/50">
-            Dengan Kualitas kontrol yang ketat, mulai dari proses panen hingga
-            pengemasan.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- End Kelebihan Section -->
-
-    <!-- Product Section -->
-    <section class="bg-[url('/src/image/product-background.png')] mt-24">
-      <h2 class="text-center font-bold text-2xl mb-8">Produk Kami</h2>
-
-      <div class="flex">
-        <!-- Buah -->
-        <div class="w-1/2 relative">
-          <img
-            src="/src/image/buah-background.png"
-            class="w-full h-auto block"
-            alt="Buah"
-          />
-
-          <div class="absolute inset-0 bg-black/50"></div>
-
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center gap-2"
-          >
-            <img class="h-16" src="/src/image/buah-logo.png" alt="buah-logo" />
-            <p class="text-white/70 text-xl font-bold">Buah</p>
-          </div>
-        </div>
-
-        <!-- Hampers -->
-        <div class="w-1/2 relative">
-          <img
-            src="/src/image/hampers-background.png"
-            class="w-full h-auto block"
-            alt="Hampers"
-          />
-
-          <div class="absolute inset-0 bg-black/50"></div>
-
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center gap-2"
-          >
-            <img
-              class="h-16"
-              src="/src/image/hampers-logo.png"
-              alt="hampers-logo"
-            />
-            <p class="text-white/70 text-xl font-bold">Hampers</p>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="flex items-center justify-center bg-indigo-300/50 py-16 gap-8"
-      >
-        <img
-          class="h-80 drop-shadow-2xl"
-          src="/src/image/hampers-main.png"
-          alt="hampers-main"
-        />
-
-        <div class="space-y-6">
-          <div>
-            <p class="font-playfair-display italic font-bold text-xl">
-              Buah Segar Setiap Hari
-            </p>
-            <p class="text-4xl font-bold">Buat hampers versi kamu, yuk!</p>
-          </div>
-          <button
-            class="bg-pink-400 py-2 px-8 rounded-full text-white font-semibold text-sm"
-          >
-            Buat Sekarang
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- End Product Section -->
-
-    <!-- Testimonial Section -->
-    <section class="py-16 space-y-8">
-      <div class="text-center">
-        <p
-          class="font-playfair-display italic font-bold text-indigo-400 text-xl"
-        >
-          Testimoni
+    <!-- Info Section -->
+    <section class="px-24 py-16">
+      <div class="text-center space-y-2">
+        <h2 class="font-bold text-2xl">Buat Parcel, Kini Lebih Mudah!</h2>
+        <p>
+          Di sini, anda dapat mengikuti langkah-langkah yang kami sediakan untuk
+          membuat hampers buah-buahan pilihan anda sendiri. Buat hampers yang
+          unik sesuai keinginan anda dan hadirkan kebahagiaan dengan sentuhan
+          pribadi dalam setiap kreasinya!
         </p>
-        <h2 class="font-bold text-3xl mt-2">Kata Pelanggan Setia Kami</h2>
-      </div>
-
-      <!-- Carousel Container -->
-      <div id="carousel-container" class="relative max-w-7xl mx-auto px-4">
-        <!-- Previous Button -->
-        <button
-          id="prevBtn"
-          class="absolute left-10 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-indigo-100 rounded-full p-3 shadow-lg transition-colors duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6 text-indigo-600"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 19.5L8.25 12l7.5-7.5"
-            />
-          </svg>
-        </button>
-
-        <!-- Carousel Wrapper -->
-        <div
-          id="carousel"
-          class="flex items-center justify-center gap-6 transition-transform duration-500"
-        >
-          <!-- Testimonials -->
-        </div>
-
-        <!-- Next Button -->
-        <button
-          id="nextBtn"
-          class="absolute right-10 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-indigo-100 rounded-full p-3 shadow-lg transition-colors duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6 text-indigo-600"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Dots Indicator -->
-      <div id="dots" class="flex justify-center gap-2 mt-8">
-        <!-- Dots will be rendered here by JavaScript -->
       </div>
     </section>
-    <!-- End Testimonial Section -->
+    <!-- End Info Section -->
+
+    <div class="max-w-4xl mx-auto mt-10">
+      <!-- Stepper -->
+      <div id="stepper" class="flex items-center justify-between">
+        <template id="step-template">
+          <div class="flex items-center">
+            <div
+              class="step w-10 h-10 rounded-full border-2 flex items-center justify-center text-sm font-semibold transition"
+            ></div>
+            <div class="line w-16 h-0.5 bg-gray-300"></div>
+          </div>
+        </template>
+
+        <div class="step active" data-step="1">1</div>
+        <div class="line"></div>
+        <div class="step" data-step="2">2</div>
+        <div class="line"></div>
+        <div class="step" data-step="3">3</div>
+        <div class="line"></div>
+        <div class="step" data-step="4">4</div>
+        <div class="line"></div>
+        <div class="step" data-step="5">5</div>
+      </div>
+    </div>
+
+    <form id="orderForm" class="max-w-4xl mx-auto mt-10 space-y-8">
+      <!-- Step 1 -->
+      <section data-step="1" class="step-content block">
+        <h2 class="text-xl font-bold mb-4">Pilih Hampers</h2>
+        <label class="block">
+          <input type="radio" name="package" value="1" class="mr-2" />
+          Package 1
+        </label>
+      </section>
+
+      <!-- Step 2 -->
+      <section data-step="2" class="step-content hidden">
+        <h2 class="text-xl font-bold mb-4">Pilih Buah</h2>
+        <label
+          ><input type="checkbox" name="fruit[]" value="apel" /> Apel</label
+        >
+      </section>
+
+      <!-- Step 3 -->
+      <section data-step="3" class="step-content hidden">
+        <h2 class="text-xl font-bold mb-4">Kartu Ucapan</h2>
+        <input
+          type="text"
+          name="card"
+          class="border rounded px-3 py-2 w-full"
+        />
+      </section>
+
+      <!-- Step 4 -->
+      <section data-step="4" class="step-content hidden">
+        <h2 class="text-xl font-bold mb-4">Data Penerima</h2>
+        <input
+          type="text"
+          name="name"
+          class="border rounded px-3 py-2 w-full"
+        />
+      </section>
+
+      <!-- Step 5 -->
+      <section data-step="5" class="step-content hidden">
+        <h2 class="text-xl font-bold mb-4">Cek Pesanan</h2>
+        <pre id="review" class="bg-gray-100 p-4 rounded"></pre>
+      </section>
+
+      <!-- Navigation -->
+      <div class="flex justify-between pt-6">
+        <button
+          type="button"
+          id="prevBtn"
+          class="px-6 py-2 rounded bg-gray-200"
+        >
+          Prev
+        </button>
+        <button
+          type="button"
+          id="nextBtn"
+          class="px-6 py-2 rounded bg-pink-500 text-white"
+        >
+          Next
+        </button>
+      </div>
+    </form>
 
     <!-- Footer Section -->
     <footer class="px-24 py-8 bg-black/90 text-white">
