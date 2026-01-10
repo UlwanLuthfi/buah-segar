@@ -9,3 +9,17 @@
 .carousel-item {
   transition: all 0.5s ease-in-out;
 }
+
+@layer utilities {
+  .bg-hero {
+    background-image: url("../image/hero-background.png");
+  }
+
+  .bg-product {
+    background-image: url("../image/product-background.png");
+  }
+
+  .bg-login {
+    background-image: url("../image/login-background.png");
+  }
+}
