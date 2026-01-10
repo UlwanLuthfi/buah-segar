@@ -77,92 +77,1059 @@
     </section>
     <!-- End Info Section -->
 
-    <div class="max-w-4xl mx-auto mt-10">
-      <!-- Stepper -->
-      <div id="stepper" class="flex items-center justify-between">
-        <template id="step-template">
-          <div class="flex items-center">
-            <div
-              class="step w-10 h-10 rounded-full border-2 flex items-center justify-center text-sm font-semibold transition"
-            ></div>
-            <div class="line w-16 h-0.5 bg-gray-300"></div>
+    <!-- Step Section -->
+    <section class="py-16 px-24">
+      <div class="grid grid-cols-5 items-center relative">
+        <!-- STEP 1 -->
+        <div class="flex flex-col items-center gap-2 relative">
+          <span
+            data-step-circle
+            class="z-10 inline-flex items-center justify-center w-16 h-16 rounded-full bg-pink-400 border-2 border-gray-300 text-white font-semibold"
+          >
+            1
+          </span>
+          <p data-step-label class="text-blue-400 font-medium">Pilih Hampers</p>
+
+          <!-- garis ke kanan -->
+          <div class="absolute top-8 left-1/2 w-full h-0.5 bg-gray-300"></div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="flex flex-col items-center gap-2 relative">
+          <span
+            data-step-circle
+            class="z-10 inline-flex items-center justify-center w-16 h-16 rounded-full bg-white border-2 border-gray-300 font-semibold"
+          >
+            2
+          </span>
+          <p data-step-label class="text-black/30 font-medium">Pilih Buah</p>
+
+          <div class="absolute top-8 left-1/2 w-full h-0.5 bg-gray-300"></div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="flex flex-col items-center gap-2 relative">
+          <span
+            data-step-circle
+            class="z-10 inline-flex items-center justify-center w-16 h-16 rounded-full bg-white border-2 border-gray-300 font-semibold"
+          >
+            3
+          </span>
+          <p data-step-label class="text-black/30 font-medium">
+            Pilih Kartu Ucapan
+          </p>
+
+          <div class="absolute top-8 left-1/2 w-full h-0.5 bg-gray-300"></div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="flex flex-col items-center gap-2 relative">
+          <span
+            data-step-circle
+            class="z-10 inline-flex items-center justify-center w-16 h-16 rounded-full bg-white border-2 border-gray-300 font-semibold"
+          >
+            4
+          </span>
+          <p data-step-label class="text-black/30 font-medium">
+            Data Informasi
+          </p>
+
+          <div class="absolute top-8 left-1/2 w-full h-0.5 bg-gray-300"></div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="flex flex-col items-center gap-2">
+          <span
+            data-step-circle
+            class="z-10 inline-flex items-center justify-center w-16 h-16 rounded-full bg-white border-2 border-gray-300 font-semibold"
+          >
+            5
+          </span>
+          <p data-step-label class="text-black/30 font-medium">Cek Pemesanan</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Step Section -->
+
+    <!-- Form Hampers -->
+    <section class="px-24 pb-16">
+      <form id="multiStepForm" class="space-y-8 flex flex-col items-center">
+        <!-- STEP FORM 1 -->
+        <div class="form-step space-y-8" data-step="1">
+          <h2 class="font-semibold text-center">Pilih Paket</h2>
+
+          <div class="flex gap-8">
+            <!-- Input 1 -->
+            <div class="w-1/4">
+              <label class="cursor-pointer block">
+                <input
+                  value="Package 1 - Rp. 250.000"
+                  type="radio"
+                  name="package"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/hampers-keranjang.png"
+                      alt="Package 1"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Package 1</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 250.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 2 -->
+            <div class="w-1/4">
+              <label class="cursor-pointer block">
+                <input
+                  value="Package 2 - Rp. 500.000"
+                  type="radio"
+                  name="package"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/hampers-main.png"
+                      alt="Package 2"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Package 2</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 500.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 3 -->
+            <div class="w-1/4">
+              <label class="cursor-pointer block">
+                <input
+                  value="Package 3 - Rp. 1.000.000"
+                  type="radio"
+                  name="package"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/hampers-background.png"
+                      alt="Package 3"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Package 3</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 1.000.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 4 -->
+            <div class="w-1/4">
+              <label class="cursor-pointer block">
+                <input
+                  value="Package 4 (Custom) - Rp. 1.200.000"
+                  type="radio"
+                  name="package"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/hampers-main-bg.png"
+                      alt="Package 4 (Custom)"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">
+                    Package 4 (Custom)
+                  </p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 1.200.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
           </div>
-        </template>
+        </div>
 
-        <div class="step active" data-step="1">1</div>
-        <div class="line"></div>
-        <div class="step" data-step="2">2</div>
-        <div class="line"></div>
-        <div class="step" data-step="3">3</div>
-        <div class="line"></div>
-        <div class="step" data-step="4">4</div>
-        <div class="line"></div>
-        <div class="step" data-step="5">5</div>
-      </div>
-    </div>
+        <!-- STEP FORM 2 -->
+        <div class="form-step hidden space-y-4" data-step="2">
+          <h2 class="font-semibold text-red-400 text-center">
+            * Hanya Bisa Memilih 5 Jenis Buah
+          </h2>
 
-    <form id="orderForm" class="max-w-4xl mx-auto mt-10 space-y-8">
-      <!-- Step 1 -->
-      <section data-step="1" class="step-content block">
-        <h2 class="text-xl font-bold mb-4">Pilih Hampers</h2>
-        <label class="block">
-          <input type="radio" name="package" value="1" class="mr-2" />
-          Package 1
-        </label>
-      </section>
+          <div class="grid grid-cols-4 gap-8">
+            <!-- Input 1 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Jeruk Sunkist"
+                  type="checkbox"
+                  name="fruits[]"
+                  class="peer hidden fruit-checkbox"
+                />
 
-      <!-- Step 2 -->
-      <section data-step="2" class="step-content hidden">
-        <h2 class="text-xl font-bold mb-4">Pilih Buah</h2>
-        <label
-          ><input type="checkbox" name="fruit[]" value="apel" /> Apel</label
-        >
-      </section>
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/jeruk-diagonal.png"
+                      alt="Jeruk Sunkist"
+                    />
+                  </div>
 
-      <!-- Step 3 -->
-      <section data-step="3" class="step-content hidden">
-        <h2 class="text-xl font-bold mb-4">Kartu Ucapan</h2>
-        <input
-          type="text"
-          name="card"
-          class="border rounded px-3 py-2 w-full"
-        />
-      </section>
+                  <p class="mt-3 text-center font-semibold">Jeruk Sunkist</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 20.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
 
-      <!-- Step 4 -->
-      <section data-step="4" class="step-content hidden">
-        <h2 class="text-xl font-bold mb-4">Data Penerima</h2>
-        <input
-          type="text"
-          name="name"
-          class="border rounded px-3 py-2 w-full"
-        />
-      </section>
+            <!-- Input 2 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Apel"
+                  type="checkbox"
+                  name="fruits[]"
+                  class="peer hidden fruit-checkbox"
+                />
 
-      <!-- Step 5 -->
-      <section data-step="5" class="step-content hidden">
-        <h2 class="text-xl font-bold mb-4">Cek Pesanan</h2>
-        <pre id="review" class="bg-gray-100 p-4 rounded"></pre>
-      </section>
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/apel-diagonal.png"
+                      alt="Apel"
+                    />
+                  </div>
 
-      <!-- Navigation -->
-      <div class="flex justify-between pt-6">
-        <button
-          type="button"
-          id="prevBtn"
-          class="px-6 py-2 rounded bg-gray-200"
-        >
-          Prev
-        </button>
-        <button
-          type="button"
-          id="nextBtn"
-          class="px-6 py-2 rounded bg-pink-500 text-white"
-        >
-          Next
-        </button>
-      </div>
-    </form>
+                  <p class="mt-3 text-center font-semibold">Apel</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 50.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 3 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Pir"
+                  type="checkbox"
+                  name="fruits[]"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/pir-diagonal.png"
+                      alt="Pir"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Pir</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 10.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 4 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Semangka"
+                  type="checkbox"
+                  name="fruits[]"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/semangka-diagonal.png"
+                      alt="Semangka"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Semangka</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 15.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 5 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Pisang"
+                  type="checkbox"
+                  name="fruits[]"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/pisang-diagonal.png"
+                      alt="Pisang"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Pisang</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 35.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 6 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Anggur"
+                  type="checkbox"
+                  name="fruits[]"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/anggur-diagonal.png"
+                      alt="Anggur"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Anggur</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 40.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 7 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="nanas"
+                  type="checkbox"
+                  name="fruits[]"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/nanas-diagonal.png"
+                      alt="Nanas"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Nanas</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 12.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 8 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Strawberry"
+                  type="checkbox"
+                  name="fruits[]"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="/src/image/stroberi-diagonal.png"
+                      alt="Strawberry"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Strawberry</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 33.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP FORM 3 -->
+        <div class="form-step hidden space-y-8" data-step="3">
+          <h2 class="font-semibold text-center">(Optional)</h2>
+
+          <div class="grid grid-cols-4 gap-8">
+            <!-- Input 1 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Happy Holiday"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/happy-holiday.png"
+                      alt="Happy Holiday"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Happy Holiday</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 5.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 1 -->
+
+            <!-- Input 2 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Congratulation"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/congratulation.png"
+                      alt="Congratulation"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Congratulation</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 3.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 2 -->
+
+            <!-- Input 3 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Merry Christmas"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/merry-christmas.png"
+                      alt="Merry Christmas"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Merry Christmas</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 6.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 3 -->
+
+            <!-- Input 4 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Merry Christmas 2"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/merry-christmas-2.png"
+                      alt="Merry Christmas 2"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">
+                    Merry Christmas 2
+                  </p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 7.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 4 -->
+
+            <!-- Input 5 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Happy Birthday"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/happy-birthday.png"
+                      alt="Happy Birthday"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Happy Birthday</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 8.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 5 -->
+
+            <!-- Input 6 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Happy Wedding"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/happy-wedding.png"
+                      alt="Happy Wedding"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Happy Wedding</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 4.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 6 -->
+
+            <!-- Input 7 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Happy Birthday"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/happy-birthday-2.png"
+                      alt="Happy Birthday"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Happy Birthday</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 2.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 7 -->
+
+            <!-- Input 8 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Thank You"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/thankyou.png"
+                      alt="Thank You"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Thank You</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 9.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 8 -->
+
+            <!-- Input 9 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Greeting Card"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/greeting-card.png"
+                      alt="Greeting Card"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Greeting Card</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 10.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 9 -->
+
+            <!-- Input 10 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Greeting Card 2"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/greeting-card-2.png"
+                      alt="Greeting Card 2"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Greeting Card 2</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 9.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 10 -->
+
+            <!-- Input 11 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Thank You 2"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/thankyou-2.png"
+                      alt="Thank You 2"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Thank You 2</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 8.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 11 -->
+
+            <!-- Input 12 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Greeting Card 3"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/greeting-card-3.png"
+                      alt="Greeting Card 3"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Greeting Card 3</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 7.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 12 -->
+
+            <!-- Input 13 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Get Well Soon"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/get-well-soon.png"
+                      alt="Get Well Soon"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Get Well Soon</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 4.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 13 -->
+
+            <!-- Input 14 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Thank You 3"
+                  type="radio"
+                  name="kartu-ucapan"
+                  class="peer hidden"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border border-gray-300-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-cover"
+                      src="/src/image/thankyou-3.png"
+                      alt="Thank You 3"
+                    />
+                  </div>
+
+                  <p class="mt-3 text-center font-semibold">Thank You 3</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 2.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+            <!-- End Input 14 -->
+          </div>
+        </div>
+
+        <!-- STEP FORM 4 -->
+        <div class="form-step hidden space-y-8 w-2/3" data-step="4">
+          <h2 class="text-xl font-semibold text-center">Data Informasi</h2>
+
+          <div class="space-y-4 w-full">
+            <!-- Nama -->
+            <div class="flex flex-col">
+              <label for="nama">Nama</label>
+              <input
+                class="border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:ring-0 focus:border-slate-400"
+                type="text"
+                name="nama"
+                id="nama"
+                placeholder="Masukan Nama"
+              />
+            </div>
+            <!-- End Nama -->
+
+            <!-- Email -->
+            <div class="flex flex-col">
+              <label for="email">Email</label>
+              <input
+                class="border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:ring-0 focus:border-slate-400"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="nama@email.com"
+              />
+            </div>
+            <!-- End Email -->
+
+            <!-- No Handphone -->
+            <div class="flex flex-col">
+              <label for="no-handphone">No. Handphone</label>
+              <input
+                class="border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:ring-0 focus:border-slate-400"
+                type="number"
+                name="no-handphone"
+                id="no-handphone"
+                placeholder="08xxxxxxxxxx"
+              />
+            </div>
+            <!-- End No Handphone -->
+
+            <!-- Alamat -->
+            <div class="flex flex-col">
+              <label for="alamat">Alamat</label>
+              <textarea
+                class="border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:ring-0 focus:border-slate-400"
+                type="t"
+                name="alamat"
+                id="alamat"
+                placeholder="Alamat Anda"
+              ></textarea>
+            </div>
+            <!-- End Alamat -->
+
+            <!-- Kode Pos / Tanggal Pengiriman -->
+            <div class="grid grid-cols-3 gap-8">
+              <div>
+                <label for="kode-pos">Kode Pos</label>
+                <input
+                  class="w-full border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:border-slate-400"
+                  type="number"
+                  id="kode-pos"
+                  placeholder="Kode Pos"
+                />
+              </div>
+
+              <div class="col-span-2">
+                <label for="tanggal-pengiriman">Tanggal Pengiriman</label>
+                <input
+                  class="w-full border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:border-slate-400"
+                  type="date"
+                  id="tanggal-pengiriman"
+                />
+              </div>
+            </div>
+            <!-- End Kode Pos / Tanggal Pengiriman -->
+
+            <!-- Teks Ucapan -->
+            <div class="flex flex-col">
+              <label for="teks-ucapan">Teks Ucapan</label>
+              <textarea
+                class="border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:ring-0 focus:border-slate-400"
+                type="text"
+                name="teks-ucapan"
+                id="teks-ucapan"
+                placeholder="Masukan Ucapan"
+              ></textarea>
+            </div>
+            <!-- End Teks Ucapan -->
+          </div>
+        </div>
+
+        <!-- STEP FORM 5 -->
+        <div class="form-step hidden space-y-6 w-2/3" data-step="5">
+          <h2 class="text-xl font-semibold text-center">Cek Pemesanan</h2>
+
+          <div
+            id="review"
+            class="bg-slate-50 border border-slate-200 rounded-xl p-6 space-y-4 text-sm"
+          ></div>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="flex justify-between gap-4">
+          <button
+            type="button"
+            id="prevBtn"
+            class="bg-slate-400 py-3 px-8 rounded-full text-white font-semibold text-sm"
+            disabled
+          >
+            Prev
+          </button>
+
+          <button
+            type="button"
+            id="nextBtn"
+            class="bg-blue-400 py-3 px-8 rounded-full text-white font-semibold text-sm"
+          >
+            Next
+          </button>
+
+          <button
+            type="submit"
+            id="submitBtn"
+            class="bg-green-400 py-3 px-8 rounded-full text-white font-semibold text-sm hidden"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+    <!-- End Form Hampers -->
 
     <!-- Footer Section -->
     <footer class="px-24 py-8 bg-black/90 text-white">
@@ -265,5 +1232,6 @@
 
     <!-- Javascript -->
     <script src="/src/script/script.js"></script>
+    <script src="/src/script/custom.js"></script>
   </body>
 </html>
