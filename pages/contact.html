@@ -8,16 +8,15 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-
     <title>Buah Segar</title>
   </head>
   <body class="min-h-dvh">
     <!-- Navigation Bar -->
     <nav
       id="navbar"
-      class="fixed top-0 left-0 z-20 w-full flex items-center justify-between px-4 transition-all duration-300 bg-transparent"
+      class="fixed top-0 left-0 z-20 w-full flex items-center justify-between px-4 md:px-8 lg:px-4 transition-all duration-300 bg-transparent"
     >
-      <div class="w-24 h-14 overflow-hidden">
+      <div class="w-20 h-12 md:w-24 md:h-14 overflow-hidden">
         <img
           class="w-full h-full object-cover"
           src="/src/image/logo.png"
@@ -25,7 +24,8 @@
         />
       </div>
 
-      <ul class="flex gap-8 transition-colors duration-300">
+      <!-- Desktop Navigation -->
+      <ul class="hidden lg:flex gap-8 transition-colors duration-300">
         <li>
           <a class="nav-link text-white text-shadow-lg/40" href="index.html"
             >Home</a
@@ -52,7 +52,54 @@
           >
         </li>
       </ul>
+
+      <!-- Hamburger Menu Button -->
+      <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 z-30">
+        <span
+          class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300"
+        ></span>
+        <span
+          class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300"
+        ></span>
+        <span
+          class="hamburger-line w-6 h-0.5 bg-white transition-all duration-300"
+        ></span>
+      </button>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed top-0 right-0 h-full w-64 bg-black/95 z-10 transform translate-x-full transition-transform duration-300 lg:hidden"
+    >
+      <ul class="flex flex-col gap-6 pt-20 px-8">
+        <li>
+          <a class="mobile-nav-link text-white text-lg" href="index.html"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a class="mobile-nav-link text-white text-lg" href="about-us.html"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a class="mobile-nav-link text-white text-lg" href="product.html"
+            >Product</a
+          >
+        </li>
+        <li>
+          <a class="mobile-nav-link text-white text-lg" href="contact.html"
+            >Contact Us</a
+          >
+        </li>
+        <li>
+          <a class="mobile-nav-link text-white text-lg" href="custom.html"
+            >Custom Hampers</a
+          >
+        </li>
+      </ul>
+    </div>
     <!-- End Navigation Bar -->
 
     <!-- Hero Section -->
@@ -60,7 +107,7 @@
       <img
         src="/src/image/contact-hero.png"
         alt="Toko buah segar"
-        class="w-full h-105 object-cover"
+        class="w-full h-64 md:h-80 lg:h-105 object-cover"
       />
 
       <div class="absolute inset-0 bg-black/40"></div>
@@ -68,29 +115,33 @@
     <!-- End Hero Section -->
 
     <!-- Info Section -->
-    <section class="px-24 py-16 flex justify-between">
-      <div class="space-y-4 w-2/5">
-        <h2 class="text-2xl font-bold">Lokasi Toko Kami</h2>
+    <section
+      class="px-4 md:px-12 lg:px-24 py-8 md:py-12 lg:py-16 flex flex-col md:flex-row justify-between gap-8 md:gap-12"
+    >
+      <div class="space-y-4 w-full md:w-2/5">
+        <h2 class="text-xl md:text-2xl font-bold">Lokasi Toko Kami</h2>
 
-        <p>
+        <p class="text-sm md:text-base">
           Jalan Lenteng Agung Raya No.20 RT.5/RW.1 Lenteng Agung, Srengseng
           Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota
           Jakarta 12640
         </p>
       </div>
 
-      <div class="border"></div>
+      <div class="hidden md:block border"></div>
 
-      <div class="space-y-4 w-2/5 flex flex-col items-end">
-        <h2 class="text-2xl font-bold">Untuk Pesanan & Kebutuhan Lainnya</h2>
+      <div class="space-y-4 w-full md:w-2/5 flex flex-col md:items-end">
+        <h2 class="text-xl md:text-2xl font-bold">
+          Untuk Pesanan & Kebutuhan Lainnya
+        </h2>
 
         <button
-          class="bg-green-500 py-3 px-8 rounded-full text-white font-semibold text-sm flex items-center gap-1"
+          class="bg-green-500 py-2 md:py-3 px-6 md:px-8 rounded-full text-white font-semibold text-sm flex items-center gap-1 w-fit"
         >
           <svg
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6 text-white"
+            class="w-5 h-5 md:w-6 md:h-6 text-white"
           >
             <title>WhatsApp</title>
             <path
@@ -109,7 +160,7 @@
     <section class="w-full">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3175823656943!2d106.8325033!3d-6.3529165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec6b07b68ea5%3A0x17da46bdf9308386!2sSTT%20Terpadu%20Nurul%20Fikri%20-%20Kampus%20B!5e0!3m2!1sid!2sid!4v1767626076489!5m2!1sid!2sid"
-        class="w-full h-112.5 border-0"
+        class="w-full h-64 md:h-96 lg:h-112.5 border-0"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
@@ -117,20 +168,22 @@
     <!-- End Google Maps -->
 
     <!-- Footer Section -->
-    <footer class="px-24 py-16 bg-black/90 text-white">
-      <div class="flex gap-4">
+    <footer
+      class="px-4 md:px-12 lg:px-24 py-8 md:py-12 lg:py-16 bg-black/90 text-white"
+    >
+      <div class="flex flex-col md:flex-row gap-8 md:gap-4">
         <!-- Contact -->
-        <div class="space-y-4 w-1/5">
+        <div class="space-y-4 w-full md:w-1/3 lg:w-1/5">
           <p class="font-semibold">Hubungi Kami</p>
 
           <div>
             <button
-              class="bg-green-500 py-3 px-8 rounded-full text-white font-semibold text-sm flex items-center gap-1"
+              class="bg-green-500 py-2 md:py-3 px-6 md:px-8 rounded-full text-white font-semibold text-sm flex items-center gap-1"
             >
               <svg
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6 text-white"
+                class="w-5 h-5 md:w-6 md:h-6 text-white"
               >
                 <title>WhatsApp</title>
                 <path
@@ -145,10 +198,10 @@
         </div>
 
         <!-- Alamat -->
-        <div class="w-3/5 space-y-8">
+        <div class="w-full md:w-1/2 lg:w-3/5 space-y-4 md:space-y-8">
           <p class="font-semibold">Toko Kami</p>
 
-          <div class="w-56 h-32 overflow-hidden">
+          <div class="w-40 h-24 md:w-56 md:h-32 overflow-hidden">
             <img
               class="w-full h-full object-cover"
               src="/src/image/logo.png"
@@ -164,16 +217,17 @@
         </div>
 
         <!-- Keep In Touch -->
-        <div class="space-y-4 w-1/5 flex flex-col items-end">
+        <div
+          class="space-y-4 w-full md:w-1/3 lg:w-1/5 flex flex-col md:items-end"
+        >
           <p class="font-semibold">Keep In Touch</p>
 
-          <div class="flex gap-1">
+          <div class="flex gap-2">
             <svg
               class="w-6 h-6 text-white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
             >
-              <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
               <path
                 fill="currentColor"
                 d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
@@ -185,7 +239,6 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
             >
-              <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
               <path
                 fill="currentColor"
                 d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l98.2 0 0-145.8-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 145.8 129 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z"
@@ -197,7 +250,6 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
             >
-              <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
               <path
                 fill="currentColor"
                 d="M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z"
@@ -207,8 +259,8 @@
         </div>
       </div>
 
-      <div class="pt-36">
-        <p class="text-center text-sm">
+      <div class="pt-12 md:pt-24 lg:pt-36">
+        <p class="text-center text-xs md:text-sm">
           Copyright © 2025 Rayuan Manis Store. All rights reserved.
         </p>
       </div>

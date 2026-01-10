@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="/src/css/output.css" />
     <title>Login</title>
   </head>
-  <body class="flex h-dvh">
+  <body class="flex flex-col md:flex-row h-dvh">
+    <!-- Left Section - Background & Branding -->
     <div
-      class="flex flex-col justify-between p-8 w-2/5 bg-[url('/src/image/login-background.png')] bg-cover"
+      class="flex flex-col justify-between p-6 md:p-8 w-full md:w-2/5 bg-[url('/src/image/login-background.png')] bg-cover"
     >
       <a class="w-fit h-fit" href="/pages/index.html">
         <div class="flex items-center space-x-2">
@@ -20,8 +21,7 @@
           <p class="text-white font-bold">Rayuan Manis</p>
         </div>
       </a>
-
-      <div class="text-white">
+      <div class="text-white hidden md:block">
         <p class="font-bold text-4xl">Segarnya Alam, Manisnya Rayuan.</p>
         <br />
         <p>
@@ -29,56 +29,70 @@
           depan pintu rumah Anda.
         </p>
       </div>
-
-      <div>
+      <div class="hidden md:block">
         <p class="text-white/60 text-sm">
           © 2024 Rayuan Manis. All rights reserved.
         </p>
       </div>
     </div>
+
+    <!-- Right Section - Register Form -->
     <div
-      class="w-3/5 bg-slate-100 flex flex-col justify-center items-center gap-4"
+      class="w-full md:w-3/5 bg-slate-100 flex flex-col justify-center items-center gap-4 p-6 md:p-8 flex-1"
     >
-      <div class="w-2/3">
-        <p class="text-2xl font-bold">Selamat Datang</p>
-        <p class="text-black/50">
+      <div class="w-full max-w-md md:w-2/3">
+        <p class="text-xl md:text-2xl font-bold">Selamat Datang</p>
+        <p class="text-black/50 text-sm md:text-base">
           Silakan masukkan detail akun Anda untuk mulai berbelanja.
         </p>
       </div>
-
-      <div class="flex flex-col w-2/3">
-        <label class="font-medium" for="email">Email</label>
+      <div class="flex flex-col w-full max-w-md md:w-2/3">
+        <label class="font-medium text-sm md:text-base" for="email"
+          >Email</label
+        >
         <input
-          class="border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:ring-0 focus:border-slate-400"
+          class="border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:ring-0 focus:border-slate-400 text-sm md:text-base"
           type="email"
           name="email"
           id="email"
           placeholder="nama@email.com"
         />
       </div>
-
-      <div class="flex flex-col w-2/3">
-        <label class="font-medium" for="password">Password</label>
+      <div class="flex flex-col w-full max-w-md md:w-2/3">
+        <label class="font-medium text-sm md:text-base" for="password"
+          >Password</label
+        >
         <input
-          class="border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:ring-0 focus:border-slate-400"
+          class="border border-slate-200 bg-white rounded-md py-2 px-4 focus:outline-none focus:ring-0 focus:border-slate-400 text-sm md:text-base"
           type="password"
           name="password"
           id="password"
           placeholder="************"
         />
       </div>
-
-      <div class="w-2/3">
+      <div class="w-full max-w-md md:w-2/3">
         <button
-          class="bg-pink-400 p-2 w-full rounded-md text-white font-semibold"
+          class="bg-pink-400 p-2 w-full rounded-md text-white font-semibold text-sm md:text-base"
         >
           Masuk Sekarang
         </button>
       </div>
+      <div class="flex gap-1 justify-center w-full max-w-md md:w-2/3">
+        <p class="text-black/50 font-medium text-sm md:text-base">
+          Sudah punya akun?
+        </p>
+        <a
+          class="text-blue-500 font-medium text-sm md:text-base"
+          href="/pages/login.html"
+          >Login</a
+        >
+      </div>
 
-      <div class="flex gap-1 justify-center w-2/3">
-        <p class="text-black/50 font-medium">Sudah punya akun?</p>
-        <a class="text-blue-500 font-medium" href="/pages/login.html">Login</a>
+      <!-- Copyright for Mobile -->
+      <div class="block md:hidden mt-4">
+        <p class="text-slate-400 text-xs text-center">
+          © 2024 Rayuan Manis. All rights reserved.
+        </p>
       </div>
     </div>
   </body>
