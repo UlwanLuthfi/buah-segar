@@ -230,15 +230,52 @@ function createTestimonialCard(testimonial, isCenter) {
 
 function renderCarousel() {
   const carousel = document.getElementById("carousel");
+  const isMobile = window.innerWidth < 768;
+
+  if (isMobile) {
+    // MOBILE MODE → SCROLL
+    carousel.innerHTML = testimonials
+      .map(
+        (t) => `
+        <div class="min-w-[16rem] snap-center">
+          <div class="bg-indigo-100 rounded-2xl px-4 py-4 shadow-lg h-64 flex flex-col gap-3">
+            <div class="flex">
+              ${createStars(t.rating)}
+            </div>
+            <blockquote class="italic text-sm grow">
+              "${t.text}"
+            </blockquote>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-fuchsia-400 flex items-center justify-center text-sm text-white font-semibold">
+                ${t.initials}
+              </div>
+              <div>
+                <p class="font-semibold text-sm">${t.name}</p>
+                <p class="text-xs text-gray-600">${t.role}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+      )
+      .join("");
+
+    // Nonaktifkan dots & autoplay di mobile
+    document.getElementById("dots").innerHTML = "";
+    clearInterval(autoplayInterval);
+    return;
+  }
+
+  // DESKTOP MODE → CAROUSEL
   const prevIndex =
     (currentIndex - 1 + testimonials.length) % testimonials.length;
   const nextIndex = (currentIndex + 1) % testimonials.length;
 
   carousel.innerHTML = `
-                ${createTestimonialCard(testimonials[prevIndex], false)}
-                ${createTestimonialCard(testimonials[currentIndex], true)}
-                ${createTestimonialCard(testimonials[nextIndex], false)}
-            `;
+    ${createTestimonialCard(testimonials[prevIndex], false)}
+    ${createTestimonialCard(testimonials[currentIndex], true)}
+    ${createTestimonialCard(testimonials[nextIndex], false)}
+  `;
 
   renderDots();
 }
@@ -262,11 +299,13 @@ function renderDots() {
 }
 
 function nextSlide() {
+  if (window.innerWidth < 768) return;
   currentIndex = (currentIndex + 1) % testimonials.length;
   renderCarousel();
 }
 
 function prevSlide() {
+  if (window.innerWidth < 768) return;
   currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
   renderCarousel();
 }
