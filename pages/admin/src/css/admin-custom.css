@@ -1,0 +1,11 @@
+/* DataTables mobile alignment fix */
+@media (max-width: 767.98px) {
+  .dataTables_length,
+  .dataTables_filter {
+    text-align: left !important;
+  }
+
+  .dataTables_filter label {
+    float: left;
+  }
+}
