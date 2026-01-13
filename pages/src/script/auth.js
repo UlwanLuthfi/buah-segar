@@ -37,7 +37,7 @@ function register(email, password) {
 
   saveUsers(users);
   alert("Registrasi berhasil");
-  window.location.href = "/pages/login.html";
+  window.location.href = "login.html";
 }
 
 // ===== LOGIN =====
@@ -50,7 +50,7 @@ function login(email, password) {
   // ADMIN LOGIN
   if (email === ADMIN.email && password === ADMIN.password) {
     localStorage.setItem("currentUser", JSON.stringify(ADMIN));
-    window.location.href = "/pages/admin/index.html";
+    window.location.href = "./admin/index.html";
     return;
   }
 
@@ -64,11 +64,11 @@ function login(email, password) {
   }
 
   localStorage.setItem("currentUser", JSON.stringify(user));
-  window.location.href = "/pages/index.html";
+  window.location.href = "index.html";
 }
 
 // ===== LOGOUT =====
 function logout() {
   localStorage.removeItem("currentUser");
-  window.location.href = "/pages/login.html";
+  window.location.href = "login.html";
 }
