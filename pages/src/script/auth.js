@@ -72,3 +72,8 @@ function logout() {
   localStorage.removeItem("currentUser");
   window.location.href = "login.html";
 }
+
+function logoutAdmin() {
+  localStorage.removeItem("currentUser");
+  window.location.href = "../login.html";
+}
