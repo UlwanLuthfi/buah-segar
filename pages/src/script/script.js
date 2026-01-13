@@ -108,6 +108,36 @@ const hero = document.getElementById("hero");
 const navLinks = document.querySelectorAll(".nav-link");
 const hamburgerLines = document.querySelectorAll(".hamburger-line");
 
+// ===== Active Page Highlight =====
+function setActiveNavLink() {
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+  // Desktop nav
+  navLinks.forEach((link) => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage) {
+      link.classList.add("text-pink-400");
+      link.classList.remove("text-white", "text-black");
+    } else {
+      link.classList.remove("text-pink-400");
+    }
+  });
+
+  // Mobile nav
+  mobileNavLinks.forEach((link) => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage) {
+      link.classList.add("text-pink-400");
+    } else {
+      link.classList.remove("text-pink-400");
+    }
+  });
+}
+
+setActiveNavLink();
+
 const triggerPoint = hero.offsetHeight - 80;
 
 window.addEventListener("scroll", () => {
@@ -125,8 +155,15 @@ window.addEventListener("scroll", () => {
 
     // Nav link color & text shadow (desktop)
     navLinks.forEach((link) => {
-      link.classList.toggle("text-black", scrolled);
-      link.classList.toggle("text-white", !scrolled);
+      if (link.hasAttribute("data-cta") || link.closest("[data-cta]")) {
+        return; // ⛔ Jangan sentuh CTA
+      }
+
+      if (!link.classList.contains("text-pink-400")) {
+        link.classList.toggle("text-black", scrolled);
+        link.classList.toggle("text-white", !scrolled);
+      }
+
       link.classList.toggle("text-shadow-lg/40", !scrolled);
     });
 

@@ -24,8 +24,10 @@
       </div>
 
       <!-- Desktop Navigation -->
-      <ul class="hidden lg:flex gap-8 transition-colors duration-300">
-        <li>
+      <ul
+        class="hidden lg:flex items-center gap-8 transition-colors duration-300"
+      >
+        <li class="">
           <a class="nav-link text-white text-shadow-lg/40" href="index.html"
             >Home</a
           >
@@ -50,6 +52,13 @@
             >Custom Hampers</a
           >
         </li>
+        <button
+          id="authButton"
+          data-cta
+          class="cursor-pointer inline-flex items-center justify-center bg-pink-400 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md transition-all duration-300 hover:shadow-lg active:scale-95"
+        >
+          Login
+        </button>
       </ul>
 
       <!-- Hamburger Menu Button -->
@@ -476,5 +485,27 @@
 
     <!-- Javascript -->
     <script src="./src/script/script.js"></script>
+    <script src="./src/script/auth.js"></script>
+    <script>
+      const authButton = document.getElementById("authButton");
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (currentUser) {
+        // Sudah login → jadi Logout
+        authButton.textContent = "Logout";
+        authButton.classList.remove("bg-pink-400");
+        authButton.classList.add("bg-gray-700");
+
+        authButton.addEventListener("click", () => {
+          logout();
+        });
+      } else {
+        // Belum login → ke halaman login
+        authButton.textContent = "Login";
+        authButton.addEventListener("click", () => {
+          window.location.href = "login.html";
+        });
+      }
+    </script>
   </body>
 </html>

@@ -10,6 +10,10 @@
   transition: all 0.5s ease-in-out;
 }
 
+.nav-active {
+  
+}
+
 @layer utilities {
   .bg-hero {
     background-image: url("../image/hero-background.png");

@@ -22,8 +22,10 @@
       </div>
 
       <!-- Desktop Navigation -->
-      <ul class="hidden lg:flex gap-8 transition-colors duration-300">
-        <li>
+      <ul
+        class="hidden lg:flex items-center gap-8 transition-colors duration-300"
+      >
+        <li class="">
           <a class="nav-link text-white text-shadow-lg/40" href="index.html"
             >Home</a
           >
@@ -48,6 +50,13 @@
             >Custom Hampers</a
           >
         </li>
+        <button
+          id="authButton"
+          data-cta
+          class="cursor-pointer inline-flex items-center justify-center bg-pink-400 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md transition-all duration-300 hover:shadow-lg active:scale-95"
+        >
+          Login
+        </button>
       </ul>
 
       <!-- Hamburger Menu Button -->
@@ -352,7 +361,7 @@
                 <input
                   value="Jeruk Sunkist"
                   type="checkbox"
-                  name="fruits[]"
+                  name="fruits"
                   class="peer hidden fruit-checkbox"
                 />
 
@@ -383,7 +392,7 @@
                 <input
                   value="Apel"
                   type="checkbox"
-                  name="fruits[]"
+                  name="fruits"
                   class="peer hidden fruit-checkbox"
                 />
 
@@ -414,7 +423,7 @@
                 <input
                   value="Pir"
                   type="checkbox"
-                  name="fruits[]"
+                  name="fruits"
                   class="peer hidden fruit-checkbox"
                 />
 
@@ -444,7 +453,7 @@
                 <input
                   value="Semangka"
                   type="checkbox"
-                  name="fruits[]"
+                  name="fruits"
                   class="peer hidden fruit-checkbox"
                 />
 
@@ -474,7 +483,7 @@
                 <input
                   value="Pisang"
                   type="checkbox"
-                  name="fruits[]"
+                  name="fruits"
                   class="peer hidden fruit-checkbox"
                 />
 
@@ -505,7 +514,7 @@
                 <input
                   value="Anggur"
                   type="checkbox"
-                  name="fruits[]"
+                  name="fruits"
                   class="peer hidden fruit-checkbox"
                 />
 
@@ -534,9 +543,9 @@
             <div>
               <label class="cursor-pointer block">
                 <input
-                  value="nanas"
+                  value="Nanas"
                   type="checkbox"
-                  name="fruits[]"
+                  name="fruits"
                   class="peer hidden fruit-checkbox"
                 />
 
@@ -566,7 +575,7 @@
                 <input
                   value="Strawberry"
                   type="checkbox"
-                  name="fruits[]"
+                  name="fruits"
                   class="peer hidden fruit-checkbox"
                 />
 
@@ -584,6 +593,246 @@
                   <p class="mt-3 text-center font-semibold">Strawberry</p>
                   <p class="mt-3 text-center font-semibold text-pink-400">
                     Rp. 33.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 9 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Buah Naga"
+                  type="checkbox"
+                  name="fruits"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="./src/image/buah-naga-diagonal.png"
+                      alt="Buah Naga"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Buah Naga</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 23.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 10 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Melon"
+                  type="checkbox"
+                  name="fruits"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="./src/image/melon-diagonal.png"
+                      alt="Melon"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Melon</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 25.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 11 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Kiwi"
+                  type="checkbox"
+                  name="fruits"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="./src/image/kiwi-diagonal.png"
+                      alt="Kiwi"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Kiwi</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 25.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 12 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Rambutan"
+                  type="checkbox"
+                  name="fruits"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="./src/image/rambutan-diagonal.png"
+                      alt="Rambutan"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Rambutan</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 25.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 13 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Mangga"
+                  type="checkbox"
+                  name="fruits"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="./src/image/mangga-diagonal.png"
+                      alt="Mangga"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Mangga</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 29.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 14 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Kelapa"
+                  type="checkbox"
+                  name="fruits"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="./src/image/kelapa-diagonal.png"
+                      alt="Kelapa"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Kelapa</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 26.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 15 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Kurma"
+                  type="checkbox"
+                  name="fruits"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="./src/image/kurma-diagonal.png"
+                      alt="Kurma"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Kurma</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 30.000
+                  </p>
+                </div>
+                <!-- End Card -->
+              </label>
+            </div>
+
+            <!-- Input 16 -->
+            <div>
+              <label class="cursor-pointer block">
+                <input
+                  value="Jambu"
+                  type="checkbox"
+                  name="fruits"
+                  class="peer hidden fruit-checkbox"
+                />
+
+                <!-- Card -->
+                <div
+                  class="rounded-2xl bg-blue-50 p-3 border-2 border-transparent peer-checked:border-pink-400 peer-checked:ring-2 peer-checked:ring-pink-200 transition"
+                >
+                  <div class="rounded-xl overflow-hidden bg-white">
+                    <img
+                      class="w-full aspect-square object-contain"
+                      src="./src/image/jambu-diagonal.png"
+                      alt="Jambu"
+                    />
+                  </div>
+                  <p class="mt-3 text-center font-semibold">Jambu</p>
+                  <p class="mt-3 text-center font-semibold text-pink-400">
+                    Rp. 25.000
                   </p>
                 </div>
                 <!-- End Card -->
@@ -1288,5 +1537,28 @@
     <!-- Javascript -->
     <script src="./src/script/script.js"></script>
     <script src="./src/script/custom.js"></script>
+    <script src="./src/script/auth.js"></script>
+    <script src="./src/script/guard.js"></script>
+    <script>
+      const authButton = document.getElementById("authButton");
+      // const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (currentUser) {
+        // Sudah login → jadi Logout
+        authButton.textContent = "Logout";
+        authButton.classList.remove("bg-pink-400");
+        authButton.classList.add("bg-gray-700");
+
+        authButton.addEventListener("click", () => {
+          logout();
+        });
+      } else {
+        // Belum login → ke halaman login
+        authButton.textContent = "Login";
+        authButton.addEventListener("click", () => {
+          window.location.href = "login.html";
+        });
+      }
+    </script>
   </body>
 </html>

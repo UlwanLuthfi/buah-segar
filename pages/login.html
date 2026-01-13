@@ -72,7 +72,7 @@
       </div>
       <div class="w-full max-w-md md:w-2/3">
         <button
-          class="bg-pink-400 p-2 w-full rounded-md text-white font-semibold text-sm md:text-base"
+          class="bg-pink-400 p-2 w-full cursor-pointer rounded-md text-white font-semibold text-sm md:text-base"
         >
           Masuk Sekarang
         </button>
@@ -96,5 +96,25 @@
         </p>
       </div>
     </div>
+
+    <script src="./src/script/auth.js"></script>
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        login(email, password);
+      });
+    </script>
+    <script>
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (currentUser) {
+        if (currentUser.role === "admin") {
+          window.location.href = "/pages/admin/index.html";
+        } else {
+          window.location.href = "/pages/index.html";
+        }
+      }
+    </script>
   </body>
 </html>
