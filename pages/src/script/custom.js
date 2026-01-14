@@ -82,10 +82,56 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  function getTransactions() {
+    return JSON.parse(localStorage.getItem("transactions")) || [];
+  }
+
+  function saveTransactions(transactions) {
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+  }
+
   // SUBMIT
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("Form berhasil disubmit 🎉");
+
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (!currentUser) {
+      alert("Silakan login terlebih dahulu");
+      window.location.href = "login.html";
+      return;
+    }
+
+    const formData = new FormData(form);
+    const data = {};
+
+    formData.forEach((value, key) => {
+      if (data[key]) {
+        // untuk checkbox (buah)
+        if (!Array.isArray(data[key])) {
+          data[key] = [data[key]];
+        }
+        data[key].push(value);
+      } else {
+        data[key] = value;
+      }
+    });
+
+    const transactions = getTransactions();
+
+    transactions.push({
+      id: Date.now(),
+      userEmail: currentUser.email,
+      date: new Date().toLocaleString(),
+      ...data,
+    });
+
+    saveTransactions(transactions);
+
+    alert("Pesanan berhasil disimpan 🎉");
+
+    // optional
+    form.reset();
+    window.location.href = "index.html";
   });
 
   // LIMIT 5 CHECKBOX BUAH
