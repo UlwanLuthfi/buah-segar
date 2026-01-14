@@ -116,6 +116,15 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Daftar User</h3>
+
+                <div class="card-tools">
+                  <button
+                    class="btn btn-sm btn-primary"
+                    onclick="openAddUser()"
+                  >
+                    <i class="fas fa-plus"></i> Tambah User
+                  </button>
+                </div>
               </div>
 
               <div class="card-body">
@@ -129,43 +138,10 @@
                       <th>Nama</th>
                       <th>Email</th>
                       <th>Role</th>
-                      <th>Status</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Admin Utama</td>
-                      <td>admin@rayuanmanis.com</td>
-                      <td><span class="badge badge-danger">Admin</span></td>
-                      <td><span class="badge badge-success">Aktif</span></td>
-                      <td>
-                        <button class="btn btn-sm btn-info">
-                          <i class="fas fa-eye"></i>
-                        </button>
-                        <button class="btn btn-sm btn-warning">
-                          <i class="fas fa-edit"></i>
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>2</td>
-                      <td>Luthfi</td>
-                      <td>luthfi@gmail.com</td>
-                      <td><span class="badge badge-primary">User</span></td>
-                      <td><span class="badge badge-success">Aktif</span></td>
-                      <td>
-                        <button class="btn btn-sm btn-info">
-                          <i class="fas fa-eye"></i>
-                        </button>
-                        <button class="btn btn-sm btn-warning">
-                          <i class="fas fa-edit"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tbody></tbody>
                 </table>
               </div>
             </div>
@@ -176,6 +152,47 @@
       <footer class="main-footer text-sm">
         <strong>Rayuan Manis</strong> Admin Panel
       </footer>
+    </div>
+
+    <!-- Modal User -->
+    <div class="modal fade" id="userModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Form User</h5>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            <input type="hidden" id="userId" />
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="userEmail" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label>Password</label>
+              <input type="text" id="userPassword" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label>Role</label>
+              <select id="userRole" class="form-control">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">
+              Batal
+            </button>
+            <button class="btn btn-primary" onclick="saveUser()">Simpan</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Scripts -->
@@ -191,11 +208,110 @@
     <script src="../src/script/auth.js"></script>
 
     <script>
+      let userTable;
+
+      function getUsers() {
+        return JSON.parse(localStorage.getItem("users")) || [];
+      }
+
+      function saveUsers(users) {
+        localStorage.setItem("users", JSON.stringify(users));
+      }
+
+      function renderUsers() {
+        const users = getUsers();
+        userTable.clear();
+
+        users.forEach((u, i) => {
+          userTable.row.add([
+            i + 1,
+            u.email.split("@")[0],
+            u.email,
+            u.role === "admin"
+              ? '<span class="badge badge-danger">Admin</span>'
+              : '<span class="badge badge-primary">User</span>',
+            `
+          <button class="btn btn-sm btn-warning" onclick="editUser(${i})">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn btn-sm btn-danger" onclick="deleteUser(${i})">
+            <i class="fas fa-trash"></i>
+          </button>
+        `,
+          ]);
+        });
+
+        userTable.draw();
+      }
+
+      function openAddUser() {
+        userId.value = "";
+        userEmail.value = "";
+        userPassword.value = "";
+        userRole.value = "user";
+        $("#userModal").modal("show");
+      }
+
+      function saveUser() {
+        const index = userId.value;
+        const email = userEmail.value;
+        const password = userPassword.value;
+        const role = userRole.value;
+
+        if (!email || !password) {
+          alert("Email dan password wajib diisi");
+          return;
+        }
+
+        let users = getUsers();
+
+        if (index !== "") {
+          // UPDATE
+          users[index] = { email, password, role };
+        } else {
+          // CREATE
+          if (users.find((u) => u.email === email)) {
+            alert("Email sudah terdaftar");
+            return;
+          }
+
+          users.push({ email, password, role });
+        }
+
+        saveUsers(users);
+        $("#userModal").modal("hide");
+        renderUsers();
+      }
+
+      function editUser(index) {
+        const users = getUsers();
+        const user = users[index];
+        if (!user) return;
+
+        userId.value = index; // simpan index
+        userEmail.value = user.email;
+        userPassword.value = user.password;
+        userRole.value = user.role;
+
+        $("#userModal").modal("show");
+      }
+
+      function deleteUser(index) {
+        if (!confirm("Yakin hapus user ini?")) return;
+
+        const users = getUsers();
+        users.splice(index, 1);
+        saveUsers(users);
+        renderUsers();
+      }
+
       $(function () {
-        $("#usersTable").DataTable({
+        userTable = $("#usersTable").DataTable({
           responsive: true,
           autoWidth: false,
         });
+
+        renderUsers();
       });
     </script>
   </body>
